@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+
+	<link rel="stylesheet" href="/css/main.css" />
+
+</head>
+<body>
+	<header>
+		<div class="wrapper wrapper--columns">
+			<div class="wrapper-column">
+				<h1>{{ title }}</h1>
+				<p>I'm a developer from New Zealand. I'm currently working for CloudCannon in Dunedin.</p>
+
+				<ul class="logos logos--small">
+					{% for logo in collections['social-logo'] %}
+						<li class="logo">{{ logo.templateContent | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="wrapper-column">
+				<ul class="logos logos--right">
+					{%- for logo in collections.logo -%}
+						<li class="logo logo--animated">{{ logo.templateContent | safe }}</li>
+					{%- endfor -%}
+				</ul>
+			</div>
+
+			<script>{% include 'logo-blinker.js' %}</script>
+		</div>
+
+	</header>
+
+	<main>
+		{{ content | safe }}
+	</main>
+</body>
+</html>
+z

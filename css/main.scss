@@ -1,0 +1,23 @@
+@import 'sass/_normalize.scss';
+* {box-sizing: border-box;}
+
+$font-color: #25282b;
+$background-color: #fefeff;
+$border-color: $font-color;
+
+#vertical-flow {
+	margin-top: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+}
+
+@import 'sass/_typography.scss';
+@import 'sass/_cards.scss';
+@import 'sass/_logos.scss';
+@import 'sass/_layout.scss';

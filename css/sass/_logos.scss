@@ -1,0 +1,66 @@
+$logo-width: 80px;
+$logo-small-width: 40px;
+$logo-margin: 16px;
+
+.logos {
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, $logo-width);
+	grid-gap: $logo-margin;
+
+	&.logos--right {
+		justify-content: right;
+	}
+
+	&.logos--small {
+		padding-top: 10px;
+		grid-template-columns: repeat(4, $logo-small-width);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fillIn {
+	0% {}
+
+	100% {
+		fill: $background-color;
+	}
+}
+
+.logo {
+	list-style: none;
+	font-size: 0;
+	position: relative;
+
+	&.logo--animated {
+		opacity: 0;
+		animation: fadeIn 1s ease;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+
+		@for $i from 1 through 16 {
+			&:nth-of-type(#{$i}) {
+				animation-delay: $i * 0.08s;
+			}
+		}
+	}
+
+	&:not(:hover):not(.logo--color) path {
+		fill: $background-color;
+		transition: fill 1s ease;
+	}
+
+	.logo-color path,
+	&:hover path {
+		transition: fill 0.1s ease;
+	}
+}
