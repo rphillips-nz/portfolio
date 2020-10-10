@@ -24,9 +24,9 @@ function toggleClassNameBetween(element, className, start) {
 	}, start);
 }
 
-function processElement(element, time, extraTimeIncrement) {
+function processElement(element, time) {
 	toggleClassNameBetween(element, 'logo--color', time);
-	return time + timeIncrement + (extraTimeIncrement || 0);
+	return time + timeIncrement;
 }
 
 function blinkLinear() {
@@ -46,8 +46,8 @@ function blinkPulse() {
 				time = processElement(matrix[row][column], time);
 
 				for (var i = row - 1; i >= 0; i--) {
-					processElement(matrix[row][i], time, timeIncrement * i);
-					time = processElement(matrix[i][column], time, timeIncrement * i);
+					processElement(matrix[row][i], time);
+					time = processElement(matrix[i][column], time);
 				}
 			}
 		}
