@@ -53,3 +53,8 @@ header {
 main {
 	@extend .wrapper;
 }
+
+footer {
+	text-align: center;
+	background-color: $secondary-color;
+}

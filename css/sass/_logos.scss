@@ -41,6 +41,14 @@ $logo-margin: 16px;
 	font-size: 0;
 	position: relative;
 
+	&.logo--link {
+		@extend .link;
+
+		&:hover path {
+			fill: $brand-color-on-dark;
+		}
+	}
+
 	&.logo--animated {
 		opacity: 0;
 		animation: fadeIn 1s ease;

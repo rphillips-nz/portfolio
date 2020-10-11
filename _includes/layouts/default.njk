@@ -7,8 +7,8 @@
 	<title>{{ title }}</title>
 
 	<link rel="stylesheet" href="/css/main.css" />
-
 </head>
+
 <body>
 	<header>
 		<div class="wrapper wrapper--columns">
@@ -18,7 +18,7 @@
 
 				<ul class="logos logos--small">
 					{% for logo in collections['social-logo'] %}
-						<li class="logo">{{ logo.templateContent | safe }}</li>
+						<li class="logo logo--link"><a href="{{ logo.data.url }}">{{ logo.templateContent | safe }}</a></li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -39,6 +39,11 @@
 	<main>
 		{{ content | safe }}
 	</main>
+
+	<footer>
+		<div class="wrapper">
+			&copy; {{ build.date.getFullYear() }} Ross Phillips
+		</div>
+	</footer>
 </body>
 </html>
-z

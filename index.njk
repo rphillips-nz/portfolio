@@ -5,17 +5,6 @@ title: Ross Phillips
 
 <ul class="cards">
 {%- for project in collections.project -%}
-	<li class="card">
-		<div class="card__header">
-			<img class="card__image" src="{{ project.data.image }}" alt="Screenshot of {{ project.data.title }}" width="570" height="422">
-		</div>
-		<div class="card__body">
-			<p class="card__title">{{ project.data.title }}</p>
-			<p class="card__description">{{ project.data.description }}</p>
-		</div>
-		<div class="card__footer">
-			<a class="card__url" href="{{ project.data.url }}" target="_blank" rel="noopener">{{ project.data.url }}</a>
-		</div>
-	</li>
+	{%- include 'project-card.njk' -%}
 {%- endfor -%}
 </ul>

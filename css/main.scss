@@ -1,8 +1,17 @@
 @import 'sass/_normalize.scss';
 * {box-sizing: border-box;}
 
+$brand-color: #26599b;
+$brand-color-on-dark: #aabce8;
+
+$secondary-color: #f0f3f6;
+
 $font-color: #25282b;
 $background-color: #fefeff;
+
+$font-color-on-dark: $background-color;
+$background-color-dark: $font-color;
+
 $border-color: $font-color;
 
 #vertical-flow {
