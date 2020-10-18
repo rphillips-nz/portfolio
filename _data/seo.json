@@ -1,0 +1,11 @@
+{
+	"title": "Ross Phillips",
+	"description": "I'm a developer from New Zealand. I work for CloudCannon in Dunedin.",
+	"url": "https://rossphillips.nz",
+	"author": "Ross Phillips",
+	"twitter": "rphillips_nz",
+	"image": "/images/siteicon.png",
+	"options": {
+		"imageWithBaseUrl": true
+  }
+}

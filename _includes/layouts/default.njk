@@ -1,10 +1,14 @@
+---
+ogtype: website
+---
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
+
+	{% seo "" %}
 
 	<link rel="stylesheet" href="/css/main.css" />
 </head>
@@ -13,8 +17,8 @@
 	<header>
 		<div class="wrapper wrapper--columns">
 			<div class="wrapper-column">
-				<h1>{{ title }}</h1>
-				<p>I'm a developer from New Zealand. I'm currently working for CloudCannon in Dunedin.</p>
+				<h1>{{ seo.title }}</h1>
+				<p>{{ seo.excerpt }}</p>
 
 				<ul class="logos logos--small">
 					{% for logo in collections['social-logo'] %}
