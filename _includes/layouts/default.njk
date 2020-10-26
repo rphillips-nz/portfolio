@@ -22,7 +22,7 @@ ogtype: website
 
 				<ul class="logos logos--small">
 					{% for logo in collections['social-logo'] %}
-						<li class="logo logo--link"><a href="{{ logo.data.url }}">{{ logo.templateContent | safe }}</a></li>
+						<li class="logo logo--link"><a href="{{ logo.data.url }}">{{ logo.data.title }}{{ logo.templateContent | safe }}</a></li>
 					{% endfor %}
 				</ul>
 			</div>
