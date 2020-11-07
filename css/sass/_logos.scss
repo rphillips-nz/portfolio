@@ -3,18 +3,24 @@ $logo-small-width: 40px;
 $logo-margin: 16px;
 
 .logos {
-	padding: 0;
 	display: grid;
+	padding: 0;
 	grid-template-columns: repeat(4, $logo-width);
 	grid-gap: $logo-margin;
 
+
+
 	&.logos--right {
 		justify-content: right;
+
+		@media (max-width: $logo-break) {
+			display: none;
+		}
 	}
 
 	&.logos--small {
-		padding-top: 10px;
-		grid-template-columns: repeat(4, $logo-small-width);
+		padding-top: 5px;
+		grid-template-columns: repeat(3, $logo-small-width);
 	}
 }
 

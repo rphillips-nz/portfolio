@@ -21,6 +21,10 @@ body {
 	.wrapper-column {
 		flex: 1;
 		padding: 32px;
+
+		@media (max-width: $logo-break) {
+			padding: 0;
+		}
 	}
 
 	.wrapper-column + .wrapper-column {
@@ -34,13 +38,21 @@ header {
 	color: $background-color;
 	padding: 50px 32px;
 
+	@media (max-width: $logo-break) {
+		text-align: center;
+
+		.social-logos {
+			justify-content: center;
+		}
+	}
+
 	> div {
 		@extend .wrapper;
 	}
 
 	h1 {
 		font-size: 64px;
-		line-height: 1;
+		line-height: 1.1;
 		font-weight: 500;
 	}
 
