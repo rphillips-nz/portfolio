@@ -1,5 +1,8 @@
-@import 'sass/_normalize.scss';
-* {box-sizing: border-box;}
+@import '_normalize.scss';
+
+* {
+	box-sizing: border-box;
+}
 
 $brand-color: #225291;
 $brand-color-on-dark: #aabce8;
@@ -29,7 +32,7 @@ $logo-break: 770px;
 	}
 }
 
-@import 'sass/_typography.scss';
-@import 'sass/_cards.scss';
-@import 'sass/_logos.scss';
-@import 'sass/_layout.scss';
+@import '_typography.scss';
+@import '_cards.scss';
+@import '_logos.scss';
+@import '_layout.scss';
