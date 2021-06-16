@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
 		return value.replace(/^[a-z]*:?\/\//i, '');
 	});
 
+	eleventyConfig.setUseGitIgnore(false);
 	eleventyConfig.addPlugin(pluginCloudCannon);
 	eleventyConfig.addPlugin(pluginSeo, seoData);
 };
