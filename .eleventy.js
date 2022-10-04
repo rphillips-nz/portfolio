@@ -1,4 +1,3 @@
-const pluginCloudCannon = require('eleventy-plugin-cloudcannon');
 const pluginSeo = require('eleventy-plugin-seo');
 const seoData = require('./_data/seo.json');
 
@@ -11,6 +10,5 @@ module.exports = function (eleventyConfig) {
 	});
 
 	eleventyConfig.setUseGitIgnore(false);
-	eleventyConfig.addPlugin(pluginCloudCannon);
 	eleventyConfig.addPlugin(pluginSeo, seoData);
 };
