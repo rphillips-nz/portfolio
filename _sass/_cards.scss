@@ -40,11 +40,12 @@ $card-border-radius: 12px;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		font-size: 14px;
 	}
 
 	&__title {
 		font-weight: bold;
-		font-size: 16px;
+		font-size: 18px;
 		@extend #vertical-flow;
 	}
 
