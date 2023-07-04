@@ -63,5 +63,10 @@ $card-border-radius: 12px;
 		object-fit: contain;
 		padding: 16px;
 		max-height: 320px;
+
+		&--cover {
+			object-fit: cover;
+			padding: 0;
+		}
 	}
 }

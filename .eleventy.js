@@ -5,8 +5,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('images');
 	eleventyConfig.addPassthroughCopy('css');
 
-	eleventyConfig.addFilter('removeUrlProtocol', function (value) {
-		return value.replace(/^[a-z]*:?\/\//i, '');
+	eleventyConfig.addFilter('displayifyUrl', function (value) {
+		return value.replace(/^[a-z]*:?\/\//i, '').replace(/\/+$/, '');
 	});
 
 	eleventyConfig.setUseGitIgnore(false);

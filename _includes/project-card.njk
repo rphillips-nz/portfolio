@@ -1,12 +1,17 @@
 <li class="card">
 	<div class="card__header">
-		<img class="card__image" src="{{ project.data.image }}" alt="Screenshot of {{ project.data.title }}" width="500" height="500">
+		<img
+			class="card__image{% if project.data.image_fit == 'cover' %} card__image--cover{% endif %}{% if project.data.image_rendering == 'pixelated' %} card__image--pixelated{% endif %}"
+			src="{{ project.data.image }}"
+			alt="Screenshot of {{ project.data.title }}"
+			widath="500"
+			heigaht="500">
 	</div>
 	<div class="card__body">
 		<p class="card__title">{{ project.data.title }}</p>
 		<p class="card__description">{{ project.data.description }}</p>
 	</div>
 	<div class="card__footer">
-		<a class="card__url" href="{{ project.data.url }}" target="_blank" rel="noopener">{{ project.data.url | removeUrlProtocol }}</a>
+		<a class="card__url" href="{{ project.data.url }}" target="_blank" rel="noopener">{{ project.data.url | displayifyUrl }}</a>
 	</div>
 </li>
